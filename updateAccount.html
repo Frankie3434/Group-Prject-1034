@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Update Account</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body onload="toggleText();">
+    <audio id="background_music" controls loop autoplay hidden>
+        <source src="audio/ThunderStormRaw.wav" preload="auto">
+    </audio>
+
+    <div id="updateAccountMain" class="form-container">
+        <div style="text-align: center;">
+            <h1>Update Account</h1>
+            <form class="accountform" id="updateAccountForm">
+                <label for="currentUsername">Enter Current Username:</label><br>
+                <input id="currentUsername" type="text" name="Current Username"><br>
+                <label for="currentPassword">Enter Current Password:</label><br>
+                <input id="currentPassword" type="password" name="Current Password"><br>
+                <label for="newUsername">Enter New Username:</label><br>
+                <input id="newUsername" type="text" name="New Username"><br>
+                <label for="newPassword">Enter New Password:</label><br>
+                <input id="newPassword" type="password" name="New Password"><br>
+                <label for="confirmPassword">Confirm New Password:</label><br>
+                <input id="confirmPassword" type="password" name="Confirm Password"><br>
+                <label>
+                    <input type="checkbox" id="updatePasswordShowHide">
+                    Show Password
+                </label>
+                <br>
+                <button class="formbutton" type="submit">Update Account</button>
+                <button class="formbutton" type="reset">Reset</button>
+            </form>
+            <br>
+            <button onclick="LandingPage();">Main Menu</button>
+            <button onclick="loginPage();">Login</button>
+            <br><br>
+            <button onclick="deleteAccountPage()">Delete Account</button>
+            <button onclick="newAccountPage()">New Account</button>
+        </div>
+        <div id="updateAccountMessage" style="text-align: center;">
+            <br><label id="updateMessage" style="color:red; text-align: center;"></label><br>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/updateAccount.js"></script>
+</body>
+</html>

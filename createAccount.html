@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create Account</title>
+        <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+        <link rel="stylesheet" href="css\styles.css">
+    </head>
+    <body onload="toggleText();">
+        <audio id="background_music" controls loop autoplay hidden>
+            <source src="audio/ThunderStormRaw.wav" preload="auto">
+        </audio>
+        <div id="createAccountMain">
+            <div id="CreateAccountBox" style="text-align: center;">
+                <h1>New Account</h1>
+                <!-- onsubmit="if(!checkInputValidity(true)){event.preventDefault();}" -->
+                <form class="accountform" id="creatingAccount">
+                    <label for="usernameCreate">Enter Username:</label><br>
+                    <input id="usernameCreate" type="text" name="Username"><br>
+                    <label for="passwordCreate">Enter Password:</label><br>
+                    <button type='button' id="paddingButton">show</button>
+                    <input id="passwordCreate" type="password" name="Password">
+                    <button type='button' id="passwordShowHide" onclick='showPassword()'>show</button><br>
+                    <label for="passwordCreateCheck">Confirm Password:</label><br>
+                    <input id="passwordCreateCheck" type="password" name="Confirm Password"><br>
+                    <button class="formbutton" type="submit">Create</button>
+                    <button class="formbutton" type="reset">reset</button><br>
+                </form><br>
+                <button onclick="LandingPage();">Main Menu</button>
+                <button onclick="accountLogin();">Login</button>
+            </div>
+            <div id="CreateAccountMessage" style="text-align: center;">
+                <br><label id="createMessage" style="color:red; text-align: center;"></label><br>
+            </div>
+        </div>
+
+    </body>
+    <script src="js\Accounts.js"></script>
+    <script src="js\utils.js"></script>
+    <script> document.getElementById("paddingButton").style.visibility = "hidden"; document.getElementById("paddingButton").style.fontSize = "0.6em";</script>
+</html>

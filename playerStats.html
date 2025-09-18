@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Statistics</title>
+    <link rel="stylesheet" href="css/leaderboard.css">
+</head>
+<body>
+    <h1>Player Statistics</h1>
+    <div class="leaderboard-container">
+        <button onclick="getBestWinTime()">Best Win Time</button>
+        <button onclick="getTotalPlayTime()">Total Play Time</button>
+        <button onclick="getTotalGames()">Games Played</button>
+        <button onclick="getEndings()">View Endings</button>
+        <button onclick="getInteractionStats()">Interaction and Accusation Stats</button>
+        <button onclick="getFavoriteStats()">Favorite Character</button>
+        <button onclick="getFavoriteInteractionType()">Favorite Interaction Type</button>
+        <button onclick="Javascript:history.back()">Back to Menu</button>
+    </div>
+    
+    <div id="resultsContainer" class="results-container">
+        <!-- Results will be displayed here -->
+    </div>
+
+    <audio id="background_music" controls loop autoplay hidden>
+        <source
+            src="audio/BackgroundAudio.mp3"
+            type="audio/mpeg"
+            preload="auto"
+        />
+    </audio>
+
+    <script src="js/utils.js"></script>
+    <script src="js/ending.js"></script>
+    <script src="js/playerstats.js"></script>
+</body>
+</html>

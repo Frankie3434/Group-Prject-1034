@@ -1,0 +1,36 @@
+<!-- Index.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Timed Minesweeper Game</title>
+</head>
+<link rel="stylesheet" href="css/minesweeper.css">
+
+<body>
+    <audio id="background_music" controls loop autoplay hidden>
+        <source src="audio/ThunderStormRaw.wav" preload="auto">
+    </audio>
+    <div class="minesweep-container">
+        <div class = "top-item">
+            <button id="menu-button" onclick="toggleMenu()">Menu</button>
+            <h1>Make Your Argument!</h1>
+            <p>
+                Click the grid to reveal each sqaure, but be careful not to hit any bad squares! the number indicates how many bad squares are adjacent to it. Tell the party who you think the culprit is, but be careful not to misspeak, as that will lead to suspicion falling on you.
+            </p> 
+            
+        </div>
+        <div id ="bottom-item" class ="bottom-item">
+            <div id="gameGrid"></div>
+            <div id="timer"></div>  
+        </div>
+    </div>
+    <div id="menu-popup" class="menu-popup" style="display: none;">
+        <button onclick="quitToMainMenu()">Quit to Main Menu</button>
+    </div> 
+</body>
+<script src="js/timer.js"></script>
+<script src="js/minesweeper.js"></script>
+
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="css/rockpaperscissors.css">
+    
+</head>
+<body>
+    <audio id="background_music" controls loop autoplay hidden>
+        <source src="audio/ThunderStormRaw.wav" preload="auto">
+    </audio>
+
+    <div id="splash-screen">
+        <h1>Rock, Paper, Scissors</h1>
+        <p>Rules: </p>
+        <ul>
+          <li>Select your choice from either rock, paper or scissors.</li>
+          <li>Your opponent will do the same.</li>
+          <li>Once you score 5 point, you will win. If your opponent scores 5 point, you will lose.</li>
+          <li>Win the minigame to collect the item!</li>
+        </ul>
+        <button id="start-button">Start Game</button>
+      </div>
+
+    <div id="game-container">
+        <h1 id="opponent-score">0</h1>
+        <img id="opponent-choice">
+        <br>
+        <img id="your-choice">
+        <div id="choices"></div>
+        <h1 id="your-score">0</h1>
+        <h1 id="comment-text"></h1>
+    </div>
+
+    <audio id="background_music" controls loop autoplay hidden>
+        <source
+            src="audio/BackgroundAudio.mp3"
+            type="audio/mpeg"
+            preload="auto"
+        />
+    </audio>
+    
+    <script src="js/rockpaperscissors.js"></script>
+</body>
+</html>

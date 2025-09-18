@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Accounts</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body onload="chooseForm();toggleText();">
+    <audio id="background_music" controls loop autoplay hidden>
+        <source src="audio/ThunderStormRaw.wav" preload="auto">
+    </audio>
+
+    <div id="LoginMain" class="form-container">
+        <div style="text-align: center;">
+            <h1>Login</h1>
+            <!-- onsubmit="if(!checkInputValidity(false)){event.preventDefault();}" -->
+            <form class="accountform" id="LoginAccount">
+                <label for="usernameCreate">Enter Username:</label><br>
+                <input id="loginUsernameCreate" type="text" name="Username"><br>
+                <label for="passwordCreate">Enter Password:</label><br>
+                <button type='button' id="paddingButton" class="hidden">show</button>
+                <input id="loginPasswordCreate" type="password" name="Password">
+                <br>
+                <label>
+                    <input type="checkbox" id="loginPasswordShowHide">
+                    Show Password
+                </label>
+                <br>
+                <button class="formbutton" type="submit">Login</button>
+                <button class="formbutton" type="reset">reset</button>
+            </form>
+            <br>
+            <button onclick="LandingPage();">Main Menu</button>
+            <button onclick="toggleForms();">New Account</button><br>
+            <br>
+            <button onclick="deleteAccountPage()">Delete Account</button>
+            <button onclick="updateAccountPage()">Update Account</button>
+        </div>
+        <div id="LoginMessage" style="text-align: center;">
+            <br><label id="loginCreateMessage" style="color:red; text-align: center;"></label><br>
+        </div>
+    </div>
+
+    <div id="createAccountMain" class="hidden">
+        <div id="CreateAccountBox" style="text-align: center;">
+            <h1>New Account</h1>
+            <!-- onsubmit="if(!checkInputValidity(true)){event.preventDefault();}" -->
+            <form class="accountform" id="creatingAccount">
+                <label for="usernameCreate">Enter Username:</label><br>
+                <input id="registerUsernameCreate" type="text" name="Username"><br>
+                <label for="passwordCreate">Enter Password:</label><br>
+                <input id="registerPasswordCreate" type="password" name="Password"><br>
+                <label for="passwordCreateCheck">Confirm Password:</label><br>
+                <input id="passwordCreateCheck" type="password" name="Confirm Password"><br>
+
+                <label>
+                    <input type="checkbox" id="registerPasswordShowHide">
+                    Show Password
+                </label>
+                <br>
+                <button class="formbutton" type="submit">Create</button>
+                <button class="formbutton" type="reset">reset</button><br>
+            </form><br>
+            <button onclick="LandingPage();">Main Menu</button>
+            <button onclick="toggleForms();">Login</button>
+            <br><br>
+            <button onclick="deleteAccountPage()">Delete Account</button>
+            <button onclick="updateAccountPage()">Update Account</button>
+        </div>
+        <div id="CreateAccountMessage" style="text-align: center;">
+            <br><label id="registerMessage" style="color:red; text-align: center;"></label><br>
+        </div>
+    </div>
+
+    <audio id="background_music" controls loop autoplay hidden>
+        <source
+            src="audio/BackgroundAudio.mp3"
+            type="audio/mpeg"
+            preload="auto"
+        />
+    </audio>
+
+
+    <script src="js/utils.js"></script>
+    <script src="js/Accounts.js"></script>
+    <script> document.getElementById("paddingButton").style.visibility = "hidden"; document.getElementById("paddingButton").style.fontSize = "1.5em";</script>
+</body>
+</html>

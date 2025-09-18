@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="css/snake.css">
+</head>
+<body>
+  <audio id="background_music" controls loop autoplay hidden>
+    <source src="audio/ThunderStormRaw.wav" preload="auto">
+</audio>
+  <div id="splash-screen">
+    <h1>Snake Minigame</h1>
+    <p>Rules: </p>
+    <ul>
+      <li>Use the up, down, left and right arrow keys to move the snake.</li>
+      <li>Avoid running into the walls or your own snake body.</li>
+      <li>Eat the fruits (red squares) to grow bigger and score point</li>
+      <li>Achieve 10 points to pass the game!</li>
+    </ul>
+    <button id="start-button">Start Game</button>
+  </div>
+  <div id="game-container" class="game-container">
+    <h1>Snake Game</h1>
+    <div id="score">Score: 0</div>
+    <div id="timer">Timer: 60s</div>
+    <div id="game-board"></div>
+    
+  </div>
+
+  <audio id="background_music" controls loop autoplay hidden>
+    <source
+        src="audio/BackgroundAudio.mp3"
+        type="audio/mpeg"
+        preload="auto"
+    />
+</audio>
+
+  <script src="js/snake.js"></script>
+</body>
+</html>

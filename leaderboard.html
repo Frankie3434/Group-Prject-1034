@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="css/leaderboard.css">
+</head>
+<body>
+    <h1>Leaderboard</h1>
+    <div class="leaderboard-container">
+        <button class="btn-leaderboard" onclick="getPlayerInfo()">Total Games Played</button>
+        <button class="btn-leaderboard" onclick="getTotalWins()">Total Wins</button>
+        <button class="btn-leaderboard" onclick="getTotalLosses()">Total Losses</button>
+        <button class="btn-leaderboard" onclick="getGameWinCompletionTimes()">Game Win Completion Time</button>
+        <button class="btn-leaderboard" onclick="getMiniGameSucceeded()">Accuse Minigames Succeeded</button>
+        <button class="btn-leaderboard" onclick="getTotalInteractions()">Total Interactions</button>
+        <button class="btn-leaderboard" onclick="Javascript:history.back()">Back to Menu</button>
+    </div>
+    
+    <div id="resultsContainer" class="results-container">
+    </div>
+
+
+    <audio id="background_music" controls loop autoplay hidden>
+        <source src="audio/BackgroundAudio.mp3" type="audio/mpeg" preload="auto">
+    </audio>
+
+    <script>
+        function showLeaderboard(id) {
+            document.querySelectorAll('.leaderboard').forEach(table => {
+                table.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+
+    <script src="js/utils.js"></script>
+    <script src="js/leaderboard.js"></script>
+    <script src="js/ending.js"></script>
+</body>
+</html>

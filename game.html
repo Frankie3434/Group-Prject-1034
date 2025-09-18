@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Murder on the Menu</title>
+        <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+        <link rel="stylesheet" href="css\styles.css" />
+        <link rel="stylesheet" href="css/accessibility.css" />
+        <script src="js/accessibility.js" defer></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lexend&family=Atkinson+Hyperlegible&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body onload="toggleText(); loadPreferences();">
+        <audio id="background_music" controls loop autoplay hidden>
+            <source
+                src="audio/BackgroundAudio.mp3"
+                type="audio/mpeg"
+                preload="auto"
+            />
+        </audio>
+        <div class="game-container">
+            <div class="left-column">
+                <div class="image-box">
+                    <img id="game-image" src="" alt="Game Image" />
+                    <p id="image-description">Image description goes here.</p>
+                </div>
+                <div class="inventory-box">
+                    <h2>Inventory</h2>
+                    <ul id="inventory-list">
+                        <!-- Inventory items will be listed here -->
+                    </ul>
+                </div>
+            </div>
+            <div class="right-column">
+                <div class="energy-box">
+                    <!-- ID corresponds to the incremented interaction value in game.js -->
+                    <img
+                        id="energy-8"
+                        src="./img/energy-image.png"
+                        alt="Energy Point"
+                    />
+                    <img
+                        id="energy-7"
+                        src="./img/energy-image.png"
+                        alt="Energy Point"
+                    />
+                    <img
+                        id="energy-6"
+                        src="./img/energy-image.png"
+                        alt="Energy Point"
+                    />
+                    <img
+                        id="energy-5"
+                        src="./img/energy-image.png"
+                        alt="Energy Point"
+                    />
+                    <img
+                        id="energy-4"
+                        src="./img/energy-image.png"
+                        alt="Energy Point"
+                    />
+                    <img
+                        id="energy-3"
+                        src="./img/energy-image.png"
+                        alt="Energy Point"
+                    />
+                    <img
+                        id="energy-2"
+                        src="./img/energy-image.png"
+                        alt="Energy Point"
+                    />
+                    <img
+                        id="energy-1"
+                        src="./img/energy-image.png"
+                        alt="Energy Point"
+                    />
+                    <img
+                        id="energy-0"
+                        src="./img/energy-image.png"
+                        alt="Energy Point"
+                    />
+                </div>
+                <div class="text-box">
+                    <p id="game-text">Game text goes here.</p>
+                    <div id="options">
+                        <!-- Options will be listed here -->
+                    </div>
+                    <button id="menu-button" onclick="toggleMenu()">
+                        Menu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="menu-popup" class="menu-popup" style="display: none">
+            <button onclick="menuSaveButton()">Save and Quit</button>
+            <button onclick="quitGame()">Quit Without Saving</button>
+        </div>
+        <script src="js/game.js"></script>
+        <script src="js/utils.js"></script>
+        <script src="js/SaveLoad.js"></script>
+        <script src="js/timer.js"></script>
+        <script src="js/accessibility.js"></script>
+    </body>
+</html>

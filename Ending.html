@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murder on the Menu</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="css\styles.css">
+</head>
+<body id="endingsPage" onload="displayEnding()">
+    <audio id="background_music" controls loop autoplay hidden>
+        <source src="audio/ThunderStormRaw.wav" preload="auto">
+    </audio>
+    <div class="endings">
+        <div id="Ending1" class="ending">
+            <img id="ending1Art" src="img/ending1.jpg" alt="An image showing a  pair of hands in handcuffs."><br>
+        </div>
+        <div id="Ending2" class="ending">
+            <img id="ending1Art" src="img/ending2option2.jpg" alt="An image showing 6 hands pointing in an accusing manner."><br>
+        </div>
+        <div id="Ending3" class="ending">
+            <img id="ending1Art" src="img/ending3.jpg" alt="An image showing a shadowy figure holding a knife behind their back."><br>
+        </div>
+    </div>
+    <div id="endingContent">
+        <h1 id="EndingTitle"></h1>
+        <p id="Conclusion"></p>
+        <p id="Time"></p>
+        <p id="Energy"></p>
+        <button onclick="quitToMainMenu()">Main Menu</button>
+        <button onclick="openLeaderboards()">Global Leaderboard</button>
+    </div>
+
+    
+    
+    <audio id="background_music" controls loop autoplay hidden>
+        <source src="audio/BackgroundAudio.mp3" type="audio/mpeg" preload="auto">
+    </audio>
+    <script src="./js/scripts.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/SaveLoad.js"></script>
+    <script src="./js/Ending.js"></script>
+    <script src="./js/timer.js"></script>
+</body>
+</html>

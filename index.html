@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murder on the Menu</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .fade-in {
+            opacity: 0;
+            transition: opacity 2s ease-in;
+        }
+        .fade-in.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="container">
+        <h1>The Door's Whisper</h1>
+        <p>Can you survive the apocalypse and discern friend from foe?</p>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+    <div id="intro-text" class="container" style="display: none;">
+        <p class="fade-in">The world ended not with a bang, but a whisper.</p>
+        <p class="fade-in">Now, shadows stretch long across empty streets, and the silence is broken only by the gnawing in your gut.</p>
+        <p class="fade-in">You're holed up in what was once your family home, a sanctuary turned prison.</p>
+        <p class="fade-in">Every day, a knock echoes – a stranger at your door.</p>
+        <p class="fade-in">Friend or foe? The choice is yours, but choose wisely.</p>
+        <p class="fade-in">Survival depends on it.</p>
+    </div> -->
+    <audio id="background_music" controls loop autoplay hidden>
+        <source src="audio/ThunderStormRaw.wav" preload="auto">
+    </audio> 
+    <div class="container">
+        <!--<h1>Murder on the Menu</h1>-->
+        <img id="titleArt" src="img/title.png" alt="Title Art reading 'Murder on the Menu'">
+        <p>Can you find the cuprit?</p>
+        <button onclick="startGame(), playBackground()">Start Game</button>
+    </div>
+    <div id="intro-text" class="container" style="display: none;">
+        <p class="fade-in">A storm rages outside, cutting off your contact from the world.</p>
+        <p class="fade-in">A body in the dark, discovered by one of your guests after dinner.</p>
+        <p class="fade-in">You're trapped. What was once a joyful celebration, is now a violent crime scene.</p>
+        <p class="fade-in">Nobody can leave, meaning the culprit is amongst you, waiting to strike again.</p>
+        <p class="fade-in">Question your guests, deduce the killer before exhaustion sets in.</p>
+        <p class="fade-in">Choose wisely, your survival depends on it.</p>
+    </div>
+    <script src="js/scripts.js"></script>
+    <script src="js/utils.js"></script>
+</body>
+</html>

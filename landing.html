@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Murder on the Menu</title>
+        <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+        <link rel="stylesheet" href="css\styles.css" />
+        <link rel="stylesheet" href="css/accessibility.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lexend&family=Atkinson+Hyperlegible&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body id="landing">
+        <div class="font-controls">
+            <div class="font-option">
+                <label for="font-select">Accessible Font:</label>
+                <select id="font-select" onchange="changeFont(this.value)">
+                    <option value="arial">Arial</option>
+                    <option value="verdana">Verdana</option>
+                    <option value="helvetica">Helvetica</option>
+                    <option value="tahoma">Tahoma</option>
+                    <option value="comic">Comic Sans MS</option>
+                    <option value="lexend">Lexend</option>
+                    <option value="atkinson">Atkinson Hyperlegible</option>
+                </select>
+            </div>
+            <div class="font-option">
+                <input
+                    type="checkbox"
+                    id="biggerText"
+                    onchange="biggerTextCheck()"
+                />
+                <label for="biggerText">Larger Game Text</label>
+            </div>
+        </div>
+        <div id="landing-buttons" class="container" style="text-align: center">
+            <img
+                id="titleArt"
+                src="img/title.png"
+                alt="Title Art reading 'Murder on the Menu'"
+            /><br />
+            <p id="loginText"></p>
+            <!-- <img id="logo" src="./img/tdw_logo_nobg.jpg" alt="The Door's Whisper Logo" class="logo" style="display: block; margin: 0 auto;"> -->
+            <button onclick="accountsPage()">Accounts</button><br />
+            <button onclick="newGame()">New Game</button><br />
+            <button onclick="loadSave()">Load Save</button><br />
+            <!-- Commenting this button because theres no current functionality <button onclick="viewProgress()">View Progress</button> -->
+            <!-- Commenting this button because closing a tab isnt possible in chrome due to security <button onclick="closeGame()">Quit</button> -->
+            <!-- Commenting because you cannot save from the menu <button onclick="saveGameState()">Save Game</button> -->
+            <button onclick="openLeaderboards()">Global Leaderboard</button
+            ><br />
+            <button onclick="statsPage()">Player Stats</button><br />
+            <button id="logout" onclick="logout()">Log Out</button><br />
+            <p>*Warning, game may contain flashing lights.</p>
+            <label for="photosensitive-mode">
+                <input type="checkbox" id="psModeCheckbox">
+                Enable photosensitive mode
+            </label>
+        </div>
+
+        <audio id="background_music" controls loop autoplay hidden>
+            <source
+                src="audio/BackgroundAudio.mp3"
+                type="audio/mpeg"
+                preload="auto"
+            />
+        </audio>
+        <script src="./js/scripts.js"></script>
+        <script src="./js/utils.js"></script>
+        <script src="./js/SaveLoad.js"></script>
+        <script src="js/accessibility.js"></script>
+    </body>
+</html>

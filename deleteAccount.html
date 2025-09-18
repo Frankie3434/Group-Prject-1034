@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Delete Account</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body onload="toggleText();">
+    <audio id="background_music" controls loop autoplay hidden>
+        <source src="audio/ThunderStormRaw.wav" preload="auto">
+    </audio>
+
+    <div id="deleteAccountMain" class="form-container">
+        <div style="text-align: center;">
+            <h1>Delete Account</h1>
+            <form class="accountform" id="deleteAccountForm">
+                <label for="usernameDelete">Enter Username:</label><br>
+                <input id="usernameDelete" type="text" name="Username"><br>
+                <label for="passwordDelete">Enter Password:</label><br>
+                <input id="passwordDelete" type="password" name="Password"><br>
+                <label>
+                    <input type="checkbox" id="deletePasswordShowHide">
+                    Show Password
+                </label>
+                <br>
+                <button class="formbutton" type="submit">Delete Account</button>
+                <button class="formbutton" type="reset">Reset</button>
+            </form>
+            <br>
+            <button onclick="LandingPage();">Main Menu</button>
+            <button onclick="loginPage();">Login</button><br>
+            <br>
+            <button onclick="newAccountPage()">New Account</button>
+            <button onclick="updateAccountPage()">Update Account</button>
+        </div>
+        <div id="deleteAccountMessage" style="text-align: center;">
+            <br><label id="deleteMessage" style="color:red; text-align: center;"></label><br>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/deleteAccount.js"></script>
+</body>
+</html>

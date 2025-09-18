@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blackjack Mini-Game</title>
+        <link rel="stylesheet" href="css/blackj.css" />
+    </head>
+    <body>
+        <audio id="background_music" controls loop autoplay hidden>
+            <source src="audio/ThunderStormRaw.wav" preload="auto">
+        </audio>
+
+        <div id="splash-screen">
+            <h1>Blackjack</h1>
+            <p>Rules: </p>
+            <ul>
+              <li>Make your hand as close to 21 as possible without going over, or you will lose.</li>
+              <li>Hit to be dealt more cards. Stand to stay with what you have.</li>
+              <li>You can hit as many times as you want, and stand once to end your turn.</li>
+              <li>Defeat the dealer to collect the item!</li>
+            </ul>
+            <button id="start-button">Start Game</button>
+        </div>
+
+        <div id="game-container" class="game-container">
+            <h1>Blackjack</h1>
+            <div class="hands">
+                <div id="dealer-hand">
+                    <h2>Dealer's Hand: <span id="dealer-sum">0</span></h2>
+                    <div id="dealer-cards"></div>
+                </div>
+                <div id="player-hand">
+                    <h2>Your Hand: <span id="player-sum">0</span></h2>
+                    <div id="player-cards"></div>
+                </div>
+            </div>
+            <div id="controls" class="controls">
+                <input id="blackjInput" type="text" name="blackjInput">
+                <button id="inputButton"  onclick="proccessText()">Go</button>
+                <p id="textresult">Enter "hit" or "stand" to play.</p>
+                <!---<button id="stand" onclick="stand()">Stand</button>--->
+            </div>
+        </div>
+
+        <audio id="background_music" controls loop autoplay hidden>
+            <source
+                src="audio/BackgroundAudio.mp3"
+                type="audio/mpeg"
+                preload="auto"
+            />
+        </audio>
+        
+        <script src="js/blackjack.js"></script>
+    </body>
+</html>
