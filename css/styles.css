@@ -1,0 +1,335 @@
+body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    min-width: min-content;
+}
+
+#titleArt{
+    height: 25vh;
+}
+
+
+#landing-buttons {
+    button {
+        margin: 1em;
+        width:300px;
+        line-height: 1.5em;
+        margin-bottom: 0em;
+
+    }
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    color: #ff6666;
+}
+
+p, #texttogglelabel {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+button, form {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 2px solid #ff6666;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#CreateAccountBox {
+    max-width: 323.44px;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
+
+#CreateAccountMessage{
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 475%);
+}
+
+button:hover {
+    background-color: #ff6666;
+    color: #1a1a1a;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 2s ease-in;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+.logo {
+    width: 200px;
+    margin: 0 auto 1em auto;
+    display: block;
+    opacity: 0;
+    transition: opacity 2s ease-in, transform 2s ease-in;
+}
+
+.logo.visible {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.game-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    padding: 1em;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    box-sizing: border-box;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.right-column {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1em;
+    box-sizing: border-box;
+}
+
+.image-box {
+    text-align: center;
+    margin-bottom: 1em;
+    width: 100%;
+    height: calc(100% - 200px); /* Adjust height to fit with inventory box */
+    border: 2px solid #ff6666;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.image-box img {
+    margin:auto;
+    max-width: 95%;
+    height: auto;
+}
+
+.inventory-box {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px; /* Fixed height */
+    border: 2px solid #ff6666;
+    padding: 1em;
+    background-color: #1a1a1a;
+    box-sizing: border-box;
+}
+
+.inventory-box h2 {
+    margin-bottom: 0.5em;
+    color: #ff6666;
+}
+
+.inventory-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.inventory-box li {
+    margin-bottom: 0.5em;
+    float: left;
+}
+
+.energy-box {
+    position: relative;
+    top: 0;
+    width:100%;
+    height: 150px; /* Fixed height */
+    border: 2px solid #ff6666;
+    padding: 1em;
+    background-color: #1a1a1a;
+    box-sizing: border-box;
+    overflow-y: auto; /* Add scroll if content overflows */
+}
+
+.energy-box h2 {
+    margin-bottom: 0.5em;
+    color: #ff6666;
+}
+
+.energy-box img {
+    margin-top: 25px;
+    margin-right:-20px;
+    position: relative;
+    height: 5rem;
+    box-sizing: border-box;
+}
+
+.text-box {
+    text-align: center;
+    border: 2px solid #ff6666;
+    padding: 1em;
+    height: calc(100% - 150px); /* Adjust height to fit with inventory box */
+    box-sizing: border-box;
+    overflow-y: auto; /* Add scroll if content overflows */
+
+    p {
+        line-height: 1.7em;
+        padding-left:2em;
+        padding-right:2em;
+        white-space: pre-line;
+    }
+}
+
+.text-box p {
+    margin-bottom: 1em;
+}
+
+
+
+#options button {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 2px solid #ff6666;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0.5em;
+}
+
+#options button:hover {
+    background-color: #ff6666;
+    color: #1a1a1a;
+}
+
+#menu-button {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    background-color: #333;
+    color: #e0e0e0;
+    border: 2px solid #ff6666;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#menu-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1a1a1a;
+    border: 2px solid #ff6666;
+    padding: 1em;
+    text-align: center;
+    z-index: 1000;
+}
+
+#menu-popup button, #load-popup button {
+    display: block;
+    margin: 0.5em auto;
+}
+
+#passwordShowHide{
+    font-size: 0.6em;
+}
+
+#passwordShowHide:hover {
+    background-color: #ff6666;
+    color: #e0e0e0;
+}
+
+.accountform {
+    text-align: center;
+    line-height: 2em;
+}
+
+input {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+.formbutton {
+    font-size: 0.9em;
+    line-height: 0.6em;
+}
+
+.hidden {
+    display: none;
+}
+
+.endings {
+    left:0;
+    top:0;
+    position:fixed;
+    overflow:hidden;
+    display: grid;
+    place-items: left;
+    grid-template-areas: "inner-div";
+}
+
+.ending {
+    grid-area: "inner-div";
+    position: fixed;
+    height: 90vh;
+}
+
+#endingsPage{
+    height: 95vh;
+    text-align: center;
+}
+
+#endingContent{
+    z-index:9999;
+    position:fixed;
+    padding: 100px;
+    width: 600px;
+    font-weight: 700;
+}
+
+#EndingTitle {
+    font-size: 5em;
+}
+
+#Conclusion {
+    font-size: 1.5em;
+}
+
+#Time, #Energy {
+    font-size: 1.7em;
+}
+
+#ending1Art, #ending2Art {
+    opacity: 0.4;
+}
+
+
+#CreateAccountMessage{
+    translate: 0% 100%;
+}

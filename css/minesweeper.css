@@ -1,0 +1,133 @@
+/* Styles.css */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+.board {
+    display: inline-block;
+    margin: 20px;
+}
+.cell {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ff6666;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 48px;
+    cursor: pointer;
+
+    /* Default color for unrevealed tiles */
+    background-color: #1a1a1a;
+
+    /* Default color for unrevealed tile text */
+    color: #e0e0e0;
+}
+.revealed {
+    /* Color for revealed tiles */
+    background-color: #e0e0e0;
+
+    /* Color for revealed tile text */
+    color: #ff6666;
+}
+.mine {
+    /* Color for mines */
+    background-color: #610000;
+    color: #000000;
+}
+
+#timer {
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.minesweep-container {
+    display: flex;
+    height: 70vh;
+    width: 600px;
+    padding: 1em;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    box-sizing: border-box;
+    justify-content: center;
+    flex-direction: column;
+    margin:auto;
+    overflow: hidden;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+.top-item{
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    position: relative;
+    box-sizing: border-box;
+    border: 2px solid #ff6666;
+    padding-left:50px;
+    padding-right:50px;
+    flex-basis: 30%;
+    h1 {
+        font-size: 28px;
+        line-height: 28px;
+        margin-bottom: -5px;
+    };
+}
+.bottom-item {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1em;
+    box-sizing: border-box;
+    border: 2px solid #ff6666;
+    flex-basis: 70%;
+}
+
+button {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 2px solid #ff6666;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #ff6666;
+    color: #1a1a1a;
+}
+
+#menu-button {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    background-color: #333;
+    color: #e0e0e0;
+    border: 2px solid #ff6666;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#menu-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1a1a1a;
+    border: 2px solid #ff6666;
+    padding: 1em;
+    text-align: center;
+    z-index: 1000;
+}
+
+#menu-popup button, #load-popup button {
+    display: block;
+    margin: 0.5em auto;
+}

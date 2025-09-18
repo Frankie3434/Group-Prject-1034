@@ -1,0 +1,94 @@
+@font-face {
+    font-family: "OpenDyslexic";
+    src: url("../fonts/OpenDyslexic-Regular.otf") format("opentype"),
+        url("../fonts/OpenDyslexic-Bold.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-controls {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #38383f;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    border: 2px solid red;
+    color: white;
+}
+
+/* Only show font controls on landing page */
+#landing .font-controls {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #38383f;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    border: 2px solid red;
+    color: white;
+}
+
+.font-option {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#landing .font-option {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+body.font-arial {
+    font-family: Arial, sans-serif;
+}
+
+/* Remove OpenDyslexic class */
+
+body.font-verdana {
+    font-family: Verdana, sans-serif;
+}
+
+body.font-helvetica {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body.font-tahoma {
+    font-family: Tahoma, sans-serif;
+}
+
+body.font-comic {
+    font-family: "Comic Sans MS", cursive;
+}
+
+body.font-lexend {
+    font-family: "Lexend", sans-serif;
+}
+
+body.font-atkinson {
+    font-family: "Atkinson Hyperlegible", sans-serif;
+}
+
+button,
+select,
+input {
+    font-family: inherit;
+}
+
+.bigger-text {
+    font-size: 1.2em !important;
+}
+
+.bigger-text button,
+.bigger-text select,
+.bigger-text input,
+.bigger-text label,
+.bigger-text p {
+    font-size: 1.2em !important;
+}
